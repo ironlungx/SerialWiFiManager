@@ -70,8 +70,8 @@ This straightforward approach allows you to include additional information withi
 
 ## 🤝 Contributing
 
-Contributions, suggestions, and bug fixes are welcome! Feel free to submit issues or pull requests.
+Contributions, suggestions, and bug fixes are welcome! Feel free to submit issues or pull requests on the [GitHub repository](https://github.com/yourusername/serialwifimanager).
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
