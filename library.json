@@ -5,7 +5,7 @@
   "sentence": "A library for streamlined management & exchange of WiFi credentials through the serial monitor.",
   "paragraph": "SerialWiFiManager simplifies connecting Arduino projects to WiFi networks by reducing boilerplate code.",
   "url": "https://github.com/ironlungx/SerialWiFiManager",
-  "archiveFileName": "SerialWiFiManager-1.0.0",
+  "archiveFileName": "SerialWiFiManager-0.1.0",
   "architectures": ["avr", "esp8266", "esp32"],
   "frameworks": [
     {
@@ -18,13 +18,13 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "IronLungX"
+      "name": "IronLungX",
+      "email": "hwlooverhello@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/serialwifimanager.git"
+    "url": "https://github.com/ironlungx/SerialWiFiManager.git"
   },
-  "exclude": ["examples/exclude_this_example"],
-  "files": ["src", "keywords.txt", "library.properties"]
+  "files": ["src", "example", "README.md", "LICENSE"]
 }
