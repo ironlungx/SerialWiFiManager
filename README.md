@@ -74,4 +74,4 @@ Contributions, suggestions, and bug fixes are welcome! Feel free to submit issue
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
