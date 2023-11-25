@@ -35,13 +35,27 @@ SerialWiFiManager is an Arduino library designed for streamlined management of W
 3. Create an instance of the SerialWiFiManager class:
 
     ```cpp
-    SerialWiFiManager wm;
+    WiFiManager wm;
+    WiFiManager wm({"defaultSSID", "passkey"});
+    WiFiManager wm({"defaultSSID", "passkey"}, baudrate);
+    WiFiManager wm(baudrate);
     ```
 
 4. Utilize SerialWiFiManager functions for managing WiFi credentials:
 
     ```cpp
-    wm.addParameter({"CustomParam", enum::DATA_TYPE});
+    void onWiFiSuccess(WiFiCredentials WiFi)
+    {
+        // WiFi connected yeey :))
+    }
+
+    int onWiFiError(WiFiCredentials WiFi, int errorCode)
+    {
+        return CB_RETRY; // Return this to retry connecting & prompting the user
+        return CB_RETRY; // Return this to quit the processs
+    }
+
+    wm.addParameter("CustomParam");
     wm.begin(onSuccess, onFailure, timeout);
     auto customParam = wm.getParameter("CustomParam");
     ```
@@ -53,7 +67,7 @@ SerialWiFiManager allows you to add custom parameters to tailor the library to y
 ### Usage
 
 ```cpp
-wm.addParameter({"CustomParam", "CustomValue"});
+wm.addParameter("CustomParam");
 ```
 
 Replace `"CustomParam"` with the desired name and `"CustomValue"` with the corresponding value for your custom parameter.
@@ -63,7 +77,7 @@ Replace `"CustomParam"` with the desired name and `"CustomValue"` with the corre
 Adding a custom parameter:
 
 ```cpp
-wm.addParameter({"TemperatureThreshold", "25°C"});
+wm.addParameter("TemperatureThreshold");
 ```
 
 This straightforward approach allows you to include additional information within the configuration process. The added custom parameters become part of the initialization, providing flexibility for various project needs.
@@ -74,4 +88,4 @@ Contributions, suggestions, and bug fixes are welcome! Feel free to submit issue
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
