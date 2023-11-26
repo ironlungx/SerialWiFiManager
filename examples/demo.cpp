@@ -13,7 +13,7 @@ void onWiFiSuccess(WiFiCredentials WiFi)
 int onWiFiError(WiFiCredentials WiFi, int errorCode)
 {
     return CB_RETRY; // Return this to retry connecting & prompting the user
-    return CB_RETRY; // Return this to quit the processs
+    return CB_QUIT; // Return this to quit the processs
 }
 
 void setup()
