@@ -1,6 +1,6 @@
 {
   "name": "SerialWiFiManager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for streamlined WiFi management through serial communication",
   "keywords": "WiFiManager, SerialWiFiManager, WiFi",
   "repository":
