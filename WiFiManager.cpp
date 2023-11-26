@@ -36,7 +36,7 @@ void WiFiManager::begin(function<void(WiFiCredentials WiFi)> onSuccessCallback, 
     Serial.println("Serial WiFi manager");
     Serial.println("*******************\n\n");
     Serial.println("Attempting to connect to provided WiFi: " + this->defaultWIFI.ssid + " with passkey: " + this->defaultWIFI.pass);
-    // Serial.println(connectToWiFi(this->defaultWIFI, timeout) ? "Success" : "Failure");
+    Serial.println(connectToWiFi(this->defaultWIFI, timeout) ? "Success" : "Failure");
 
     for (auto &p : this->parameters)
     {
@@ -51,11 +51,14 @@ void WiFiManager::begin(function<void(WiFiCredentials WiFi)> onSuccessCallback, 
     WAIT_FOR_SERIAL;
     cred.ssid = Serial.readString();
     cred.ssid.trim();
+    Serial.println();
 
     Serial.print("Enter password:\t");
     WAIT_FOR_SERIAL;
     cred.pass = Serial.readString();
     cred.pass.trim();
+    Serial.println();
+
 
     if (connectToWiFi(cred, timeout) == OK) onSuccessCallback(cred);
     if (connectToWiFi(cred, timeout) == ERR_NO_WIFI) onFailureCallback(cred, ERR_NO_WIFI);
