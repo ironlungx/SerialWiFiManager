@@ -18,9 +18,9 @@ int onWiFiError(WiFiCredentials WiFi, int errorCode)
 
 void setup()
 {
-    wm.addParameter({"Name of Custom Parameter1"});
-    wm.addParameter({"Name of Custom Parameter2"});
-    wm.addParameter({"Name of Custom Parameter3"});
+    wm.addParameter("Name of Custom Parameter1");
+    wm.addParameter("Name of Custom Parameter2");
+    wm.addParameter("Name of Custom Parameter3");
 
     wm.begin(onWiFiSuccess, onWiFiError, 1000);
 

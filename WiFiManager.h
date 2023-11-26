@@ -59,8 +59,8 @@ public:
      * @param onSuccessCallback. A function that is to be called when the operation is successful
      */
     void begin(function<void(WiFiCredentials WiFi)> onSuccessCallback, function<int(WiFiCredentials WiFi, int errorCode)> onFailureCallback, long timeout);
-    int addParameter(Parameter _parameter);
-    Parameter getParameter(String _name);
+    int addParameter(String name);
+    Parameter getParameter(String name);
 
     ~WiFiManager();
 };

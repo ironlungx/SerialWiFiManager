@@ -11,7 +11,7 @@ WiFiManager::WiFiManager(const WiFiCredentials defaultWiFi, long baud)
 {
 }
 
-WiFiManager::WiFiManager(const WiFiCredentials defaultWiFi, long baud)
+WiFiManager::WiFiManager(const WiFiCredentials defaultWiFi)
     : defaultWIFI(defaultWiFi)
 {
 }
@@ -95,11 +95,11 @@ int WiFiManager::addParameter(String name)
     }
 }
 
-Parameter WiFiManager::getParameter(String _name)
+Parameter WiFiManager::getParameter(String name)
 {
     for (const Parameter i : this->parameters)
     {
-        if (i.Name == _name)
+        if (i.Name == name)
         {
             return i;
         }
