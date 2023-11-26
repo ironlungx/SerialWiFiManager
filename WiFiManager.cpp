@@ -57,7 +57,8 @@ void WiFiManager::begin(function<void(WiFiCredentials WiFi)> onSuccessCallback, 
     cred.pass = Serial.readString();
     cred.pass.trim();
 
-    connectToWiFi(cred, timeout);
+    if (connectToWiFi(cred, timeout) == OK) onSuccessCallback(cred);
+    if (connectToWiFi(cred, timeout) == ERR_NO_WIFI) onFailureCallback(cred, ERR_NO_WIFI);
 }
 
 int WiFiManager::connectToWiFi(WiFiCredentials cred, long timeout)
